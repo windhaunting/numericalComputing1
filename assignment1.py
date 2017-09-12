@@ -34,7 +34,13 @@ def evens_only(input_list):
 
 def piecewise(x):
     ### Add your code here ###
-    x = 1
+    if x < 0:
+        return -1.0
+    elif x < 2:
+        return float(3*x**2)
+    else:
+        return float(-1*x)
+
     
 ##################################################
 # PROBLEM 3: Character count
@@ -49,6 +55,23 @@ def piecewise(x):
 # count. The keys of this dictionary should have type 
 # string and the values should have type int.
 
+import re
 def character_count(input_string):
     ### Add your code here ###
-    x = 1
+    dic = {}
+    with open(input_string, 'r') as infile:
+        for line in infile:
+            print ("xxxxxxxxxline: ", line.strip())
+            for v in line.strip():
+                #print ("v: ", v)
+                if v.isalpha():
+                    if v.lower() not in dic:
+                        dic[v.lower()] = 1
+                    else:
+                        dic[v.lower()] += 1
+    return dic
+
+
+
+        
+

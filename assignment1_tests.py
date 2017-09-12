@@ -2,6 +2,8 @@ import unittest
 import sys
 import imp
 from assignment1 import evens_only
+from assignment1 import piecewise
+from assignment1 import character_count
 
 def check_load(filename,fun_name):
     try:
