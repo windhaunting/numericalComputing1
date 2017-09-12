@@ -17,6 +17,12 @@
 
 def evens_only(input_list):
     ### Add your code here ###
+    resLst = []
+    for num in input_list:
+        if num % 2 == 0:
+            resLst.append(int(num))
+    return resLst
+
 
 ##################################################
 # PROBLEM 2: Piecewise function
@@ -28,6 +34,7 @@ def evens_only(input_list):
 
 def piecewise(x):
     ### Add your code here ###
+    x = 1
     
 ##################################################
 # PROBLEM 3: Character count
@@ -44,3 +51,4 @@ def piecewise(x):
 
 def character_count(input_string):
     ### Add your code here ###
+    x = 1

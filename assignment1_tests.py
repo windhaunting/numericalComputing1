@@ -1,6 +1,7 @@
 import unittest
 import sys
 import imp
+from assignment1 import evens_only
 
 def check_load(filename,fun_name):
     try:
