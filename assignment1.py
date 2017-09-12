@@ -34,7 +34,9 @@ def evens_only(input_list):
 
 def piecewise(x):
     ### Add your code here ###
-    if x < 0:
+    if not isinstance(x, float) and not isinstance(x, int):
+        return None
+    if x < 0:                  
         return -1.0
     elif x < 2:
         return float(3*x**2)
@@ -58,12 +60,13 @@ def piecewise(x):
 import re
 def character_count(input_string):
     ### Add your code here ###
-    dic = {}
+    dic = {}                       #result dictionary
+    if input_string is None or input_string == "":
+        return dic
+
     with open(input_string, 'r') as infile:
         for line in infile:
-            print ("xxxxxxxxxline: ", line.strip())
-            for v in line.strip():
-                #print ("v: ", v)
+            for v in line.strip():             #iterate each line
                 if v.isalpha():
                     if v.lower() not in dic:
                         dic[v.lower()] = 1

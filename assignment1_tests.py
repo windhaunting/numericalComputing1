@@ -65,6 +65,7 @@ class Tester(unittest.TestCase):
         print("********** Testing character_count() **********")
         fun = check_load(self.fn,"character_count")
         if fun is not None:
+            _test(fun,"", {})
             _test(fun,"test1.txt" , {'e': 1, 'g': 1, 'i': 1, 'n': 1, 's': 2, 'r': 1, 't': 3})
             _test(fun,"test2.txt" , {'a': 14, 'c': 10, 'b': 2, 'e': 25, 'd': 8, 'g': 1, 'i': 12, 'm': 10, 'l': 6, 'o': 14, 'n': 5, 'q': 1, 'p': 7, 's': 14, 'r': 8, 'u': 12, 't': 11})
             _test(fun,"test3.txt" , {})
